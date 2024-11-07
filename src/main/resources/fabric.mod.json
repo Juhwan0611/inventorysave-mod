@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "inventorysave",
+  "version": "${version}",
+  "name": "inventorysave-mod",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/inventorysave/textures/item/inventorysave.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "com.juhwan.inventory.client.inventorysaveClient"
+    ],
+    "main": [
+      "com.juhwan.inventory.InventorySaveMod"
+    ]
+  },
+  "mixins": [
+    "inventorysave.mixins.json",
+    {
+      "config": "inventorysave.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
